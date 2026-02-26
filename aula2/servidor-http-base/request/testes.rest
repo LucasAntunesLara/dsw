@@ -1,0 +1,28 @@
+### Endpoint GET /api/alunos
+GET http://localhost:3000/api/alunos
+
+
+### Endpoint POST /api/alunos
+POST http://localhost:3000/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "curso": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+  "idade": 22
+}
+
+
+### Endpoint PUT /api/alunos/{id}
+PUT http://localhost:3000/api/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "curso": "Ciência da Computação",
+  "idade": 23
+}
+
+
+### Endpoint DELETE /api/alunos/{id}
+DELETE http://localhost:3000/api/alunos/1
