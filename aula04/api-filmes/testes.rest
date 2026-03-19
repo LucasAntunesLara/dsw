@@ -1,0 +1,41 @@
+@base = http://localhost:4000
+
+
+### Listar todos os filmes
+GET {{base}}/filmes
+Accept: application/json
+
+
+### Buscar filme por ID
+GET {{base}}/filmes/1
+Accept: application/json
+
+
+### Adicionar filme
+POST {{base}}/filmes
+Content-Type: application/json
+
+{
+  "titulo": "Star Wars",
+  "descricao": "Guerra nas estrelas.",
+  "ano": 1977,
+  "genero": "Ficção Científica",
+  "nota": 9.2
+}
+
+
+### Atualizar um filme existente
+PUT {{base}}/filmes/1
+Content-Type: application/json
+
+{
+  "titulo": "Star Wars",
+  "descricao": "Guerra nas estrelas.",
+  "ano": 1977,
+  "genero": "Ficção Científica",
+  "nota": 9.2
+}
+
+
+### Deletar um filme
+DELETE {{base}}/filmes/1

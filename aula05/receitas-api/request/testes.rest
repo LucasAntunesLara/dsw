@@ -1,0 +1,44 @@
+@baseURL = http://localhost:3000
+
+
+###
+POST {{baseURL}}/receitas
+Content-Type: application/json
+
+{
+  "nome": "Lasanha à Bolonhesa",
+  "descricao": "Clássica lasanha italiana com camadas de massa, molho bolonhesa, queijo e presunto, gratinada ao forno.",
+  "ingredientes": "500g de massa para lasanha, 500g de carne moída, 2 sachês de molho de tomate, 1 cebola picada, 3 dentes de alho picados, 300g de presunto fatiado, 300g de mussarela fatiada, 1 caixa de creme de leite, queijo parmesão ralado a gosto, azeite, sal e pimenta-do-reino a gosto",
+  "modo_preparo": "Refogue a cebola e o alho no azeite. Acrescente a carne moída e cozinhe até dourar. Adicione o molho de tomate, tempere com sal e pimenta e deixe cozinhar por 10 minutos. Em um refratário, alterne camadas de massa, molho, presunto e mussarela. Finalize com molho e queijo parmesão. Leve ao forno preaquecido a 200°C por 30 minutos. Nos últimos 5 minutos, adicione o creme de leite por cima e gratine.",
+  "tempo_preparo": 60,
+  "dificuldade": "Médio"
+}
+
+
+### 
+GET {{baseURL}}/receitas
+Content-Type: application/json
+
+
+### 
+GET {{baseURL}}/receitas/1
+Content-Type: application/json
+
+
+###
+PUT {{baseURL}}/receitas/1
+Content-Type: application/json
+
+{
+  "nome": "Bolo de Chocolate Simples",
+  "descricao": "Um delicioso bolo de chocolate fofinho e fácil de fazer, perfeito para o café da tarde.",
+  "ingredientes": "3 ovos, 2 xícaras de farinha de trigo, 1 xícara de açúcar, 1 xícara de chocolate em pó, 1 xícara de leite, 1/2 xícara de óleo, 1 colher de sopa de fermento em pó",
+  "modo_preparo": "Bata os ovos, açúcar e óleo até formar um creme. Adicione o leite e misture. Acrescente a farinha e o chocolate aos poucos. Por último, adicione o fermento. Asse em forno preaquecido a 180°C por 35 minutos.",
+  "tempo_preparo": 35,
+  "dificuldade": "Difícil"
+}
+
+
+###
+DELETE {{baseURL}}/receitas/1
+Content-Type: application/json

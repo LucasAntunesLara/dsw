@@ -1,0 +1,41 @@
+### Listar todos os lanches
+GET http://localhost:3000/cardapio
+Accept: application/json
+
+
+### Filtrar lanches por categoria
+GET http://localhost:3000/cardapio?categoria=sandúiche
+Accept: application/json
+
+
+### Buscar lacnhe por ID
+GET http://localhost:3000/cardapio/1
+Accept: application/json
+
+
+### Adicionar lanche
+POST http://localhost:3000/cardapio
+Content-Type: application/json
+
+{
+  "nome": "Milkshake",
+  "descricao": "Milkshake de chocolate",
+  "preco": 15.00,
+  "categoria": "bebida"
+}
+
+
+### 5. Atualizar um lanche existente (substituir {id} pelo ID desejado)
+PUT http://localhost:3000/cardapio/1
+Content-Type: application/json
+
+{
+  "nome": "X-Bacon Deluxe",
+  "descricao": "Pão, hambúrguer, queijo, bacon crocante, maionese especial",
+  "preco": 25.00,
+  "categoria": "sanduíche"
+}
+
+
+### 6. Remover um lanche pelo ID (substituir {id} pelo ID desejado)
+DELETE http://localhost:3000/cardapio/3
